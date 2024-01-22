@@ -1,0 +1,82 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+   box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: url('https://www.vmcdn.ca/f/files/sudbury/uploadedImages/SUMMER_sunWater.jpg;w=660') center/cover no-repeat;
+  color: #333;
+}
+
+.nav-bar {
+  background-color: #1f1c1c;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.nav-bar-side-1 {
+  flex: 1;
+}
+
+.nav-bar-side-2 {
+  list-style: none;
+  display: flex;
+  position: relative;
+  right: 100px;
+}
+
+.nav-bar-side-2 li {
+  margin-right: 15px;
+}
+
+.nav-bar-side-2 a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 600px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #181411;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.location{
+  font-weight: 400px;
+  color: rgb(17, 16, 16);
+  text-align: center;
+
+}
+ul{
+  list-style: none;
+}
+.search-box{
+  position: relative;
+  text-align: center;
+}

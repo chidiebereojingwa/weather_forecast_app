@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css '%}">
+    <title>Weather App</title>
+  </head>
+  <nav class="nav-bar">
+    <div class="nav-bar-side-1">
+      <h2>Weather App</h2>
+    </div>
+    <ul class="nav-bar-side-2">
+      <li><a href="https://openweathermap.org/">Source - OpenWeather </a></li>
+       
+      </ul>
+  </nav>
+
+  <body>
+    <div class="header-container">
+        <h1 class="header--h1">Weather DeskTop App</h1>
+        <p class="header--p">Using Python Language and Django Framework</p>
+        <img src="{% static 'images/pngegg.png'%}" alt="weather-logo" class="image">
+    </div>
+    <form method="post" action="{% url 'search' %}">
+        {% csrf_token %}
+        
+        <input type="text" id="city" name="city" required placeholder=" Enter Your CIty ...">
+        <button type="submit">Search</button>
+    </form>
+    
+    {% if locations %}
+    <div class="search-box">
+        <h2>Search results for "{{ selected_city }}"</h2>
+        <ul>
+            {% for location in locations %}
+                <li><a href="{% url 'detail' city_id=location.id %}" class="location">{{ location.name }}, {{ location.country }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+        
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/detail.css '%}">
+    <title>Weather Forecast - {{ forecast.city_name }}</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Forecast - {{ forecast.city_name }}, {{ forecast.country }}</h1>
+        </header>
+        <main>
+            <p>Temperature: {{ forecast.temperature }} K</p>
+            <p>Description: {{ forecast.description }} <img src="https://openweathermap.org/img/w/{{ forecast.icon }}.png" alt="{{ forecast.description }}"></p>
+            <p>Wind Speed: {{ forecast.wind_speed }} m/s</p>
+            <p>Wind Direction: {{ forecast.wind_direction }}°</p>
+            <p>Humidity: {{ forecast.humidity }}%</p>
+        </main>
+    </div>
+</body>
+</html>
